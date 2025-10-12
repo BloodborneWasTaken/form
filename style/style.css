@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: bold;
+  src: url(/font/Vazir-Bold.woff2);
+}
+
+body {
+  font-family: bold;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+form {
+  height: 70vh;
+  width: 20%;
+  border: 5px solid #000;
+  border-radius: 20px;
+  padding-top: 55px;
+  text-align: center;
+}
+
+form input {
+  width: 200px;
+  height: 30px;
+  background-color: #f2f2f2;
+  padding-left: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+form input.submit {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: blue;
+  color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding-right: 10px;
+}
