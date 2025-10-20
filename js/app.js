@@ -5,6 +5,8 @@ const lastNameInput = document.getElementsByTagName("input")[1];
 const ageInput = document.getElementsByTagName("input")[2];
 const fatherNameInput = document.getElementsByTagName("input")[3];
 const nationalCodeInput = document.getElementsByTagName("input")[4];
+const adressInput = document.getElementsByTagName("input")[5];
+const zipCodeInput = document.getElementsByTagName("input")[6];
 
 userForm.addEventListener("submit", (e) => {
   const user = {
@@ -13,6 +15,8 @@ userForm.addEventListener("submit", (e) => {
     age: e.target.age.value,
     fatherName: e.target.fatherName.value,
     nationalCode: e.target.nationalCode.value,
+    adress: e.target.adress.value,
+    zipCoide: e.target.zipCode.value,
   };
 
   console.log(user);
@@ -22,30 +26,48 @@ userForm.addEventListener("submit", (e) => {
 
 firstNameInput.addEventListener("blur", (e) => {
   if (firstNameInput.value.length < 3) {
-    alert("your name isn`t right");
+    alert("come on, write your name.🙁");
   }
 });
 
 lastNameInput.addEventListener("blur", (e) => {
   if (lastNameInput.value.length < 3) {
-    alert("your last name isn`t right");
+    alert("please write your last name.😧");
   }
 });
 
 ageInput.addEventListener("blur", (e) => {
   if (ageInput.value < 2) {
-    alert("your age isn`t right");
+    alert("are you sure this is an age.🤔");
   }
 });
 
 fatherNameInput.addEventListener("blur", (e) => {
   if (fatherNameInput.value.length < 3) {
-    alert("your father name isn`t right");
+    alert("is this your father name? are you kidding me.🤣");
   }
 });
 
 nationalCodeInput.addEventListener("blur", (e) => {
-  if (nationalCodeInput.value.length < 10 || nationalCodeInput.value.length > 10) {
-    alert("your national code isn`t right");
+  if (
+    nationalCodeInput.value.length < 10 ||
+    nationalCodeInput.value.length > 10
+  ) {
+    alert("I didn`t see a national code.😂 please write your national code.🙂");
   }
+});
+
+adressInput.addEventListener("blur", (e) => {
+  if (adressInput.value.includes("tehran") == true) {
+    alert("you will get your post soon.😎");
+  } else if (adressInput.value.length < 3) {
+    alert("is this your adress your adress🤔 come on😡");
+  }
+  console.log(adressInput.value.trim().toLowerCase());
+});
+zipCodeInput.addEventListener("blur", (e) => {
+  if (zipCodeInput.value.length < 10 || zipCodeInput.value.length > 10) {
+    alert("why you didn`t write your zip code.🤔");
+  }
+  console.log(zipCodeInput.value.trim().toLowerCase());
 });
