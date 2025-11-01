@@ -8,18 +8,35 @@ const nationalCodeInput = document.getElementsByTagName("input")[4];
 const adressInput = document.getElementsByTagName("input")[5];
 const zipCodeInput = document.getElementsByTagName("input")[6];
 
+const usersList = [];
 userForm.addEventListener("submit", (e) => {
-  const user = {
-    firstName: e.target.firstName.value,
-    lastName: e.target.lastName.value,
-    age: e.target.age.value,
-    fatherName: e.target.fatherName.value,
-    nationalCode: e.target.nationalCode.value,
-    adress: e.target.adress.value,
-    zipCoide: e.target.zipCode.value,
-  };
+  if (
+    firstNameInput.value.length < 3 ||
+    lastNameInput.value.length < 3 ||
+    ageInput.value < 2 ||
+    fatherNameInput.value.length < 3 ||
+    nationalCodeInput.value.length < 10 ||
+    nationalCodeInput.value.length > 10 ||
+    adressInput.value.length < 3 ||
+    zipCodeInput.value.length < 10 ||
+    zipCodeInput.value.length > 10
+  ) {
+    alert("☹please do every things.☹");
+  } else {
+    const user = {
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      age: e.target.age.value,
+      fatherName: e.target.fatherName.value,
+      nationalCode: e.target.nationalCode.value,
+      adress: e.target.adress.value,
+      zipCoide: e.target.zipCode.value,
+    };
 
-  console.log(user);
+    usersList.push(user);
+
+    console.log(usersList);
+  }
 
   e.preventDefault();
 });
