@@ -45,3 +45,17 @@ form input.submit {
   border-radius: 10px;
   padding-right: 10px;
 }
+
+.box {
+  width: 200px;
+  height: 250px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 30px;
+  padding-top: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+}

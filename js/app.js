@@ -30,12 +30,19 @@ userForm.addEventListener("submit", (e) => {
       fatherName: e.target.fatherName.value,
       nationalCode: e.target.nationalCode.value,
       adress: e.target.adress.value,
-      zipCoide: e.target.zipCode.value,
+      zipCode: e.target.zipCode.value,
     };
 
     usersList.push(user);
 
     console.log(usersList);
+
+    usersList.forEach((item) => {
+      const box = document.createElement("div");
+      box.innerHTML = `<div>${item.firstName}</div><div>${item.lastName}</div><div>${item.age}</div><div>${item.fatherName}</div><div>${item.nationalCode}</div><div>${item.adress}</div><div>${item.zipCode}</div>`;
+      box.classList.add("box");
+      document.body.appendChild(box);
+    });
   }
 
   e.preventDefault();
